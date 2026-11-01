@@ -1,0 +1,7 @@
+Options -Indexes -ExecCGI
+<FilesMatch "\.(?i:php[0-9]?|phtml|phar|pht)$">
+    Require all denied
+</FilesMatch>
+<FilesMatch "\.(?i:pdf|docx?|odt|rtf|txt)$">
+    Require all denied
+</FilesMatch>

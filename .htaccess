@@ -1,0 +1,15 @@
+RewriteEngine On
+
+# Remove .php from URL
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^([^\.]+)$ $1.php [L]
+
+# Redirect index
+DirectoryIndex index.php
+
+# Prevent directory listing
+Options -Indexes
+
+# Block private project data and helper endpoints from direct web access.
+RewriteRule ^(?:database/|hash\.php$) - [F,L,NC]

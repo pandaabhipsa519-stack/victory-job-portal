@@ -1,0 +1,52 @@
+# User-uploaded files; keep the directory access rules.
+/uploads/resumes/*
+!/uploads/resumes/.htaccess
+/uploads/profile/*
+!/uploads/profile/.htaccess
+/uploads/company-logos/*
+!/uploads/company-logos/.htaccess
+
+# Local configuration and secrets.
+.env
+.env.*
+!.env.example
+/config.local.php
+/includes/config.local.php
+/hash.php
+*.pem
+*.key
+*.p12
+*.pfx
+credentials.json
+secrets.json
+
+# Private database exports and backups.
+/database/victory_db.sql
+/database/*backup*.sql
+/database/*Backup*.sql
+/backups/
+/backup/
+/private-backups/
+/database/backups/
+*.bak
+*.backup
+*.sql.bak
+*.dump
+*.sql.gz
+*.sql.zip
+
+# Temporary and generated files.
+*.tmp
+*.temp
+*.swp
+*~
+/tmp/
+/temp/
+/cache/
+*.cache
+/logs/
+*.log
+
+# Operating-system metadata.
+.DS_Store
+Thumbs.db
